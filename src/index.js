@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./css/main.css";
+import logo from './logo.svg';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { Tasks } from "./tasks";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App() {
+  return (
+    <>
+      <h1 className="title">Kanban Board for Projects</h1>
+      <div className="maingrid">
+        <Tasks />
+      </div>
+      <div className="footer">
+        <p style={{fontSize: "2rem"}}>This site is made with React.</p>
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

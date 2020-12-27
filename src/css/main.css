@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background:  linear-gradient(-80deg,white,#cff4fc,rgb(248, 219, 225)
+    );
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    font-weight: lighter;
+}
+
+.maingrid{
+    margin-left: .5rem;
+    margin-right: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .5rem;
+}
+
+.tasks,.progress,.completed {
+    background-color: white;
+    min-height: 85vh;
+    max-height: 150vh;
+    /* height: fit-content; */
+    overflow: scroll;
+    padding: .5rem;
+    box-shadow: 2px 5px 2px #888888;
+    font-weight: bold;
+}
+.tasks::-webkit-scrollbar{
+    width: .3rem;
+    height: 0rem;
+}
+
+.tasks::-webkit-scrollbar-track{
+    background: #282c34;
+}
+
+.tasks::-webkit-scrollbar-thumb{
+    background: orangered;
+}
+.progress::-webkit-scrollbar{
+    width: .3rem;
+    height: 0rem;
+}
+
+.progress::-webkit-scrollbar-track{
+    background: #282c34;
+}
+
+.progress::-webkit-scrollbar-thumb{
+    background: orangered;
+}
+
+.completed::-webkit-scrollbar{
+    width: .3rem;
+    height: 0rem;
+}
+
+.completed::-webkit-scrollbar-track{
+    background: #282c34;
+}
+
+.completed::-webkit-scrollbar-thumb{
+    background: orangered;
+}
+
+.tcard {
+    display: flex;
+    background-color: #cfe2ff;
+    width: 100%;
+    height: fit-content;
+    padding: .5rem;
+    margin-top: .5rem;
+    justify-content: space-between;
+}
+.pcard{
+    background-color: #fff3cd;
+}
+.ccard{
+    background-color: #d1e6dd;
+}
+
+input {
+    min-height: 2rem;
+    width: 80%;
+}
+
+.tasks>button{
+    margin-left: .5rem;
+    padding: .2rem;
+}
+
+
+.tbuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: .5rem;
+    border-radius: 2px;
+}
+
+.tbuttons button {
+    border-radius: 5px;
+    margin-top: 2px;
+    background-color: white;
+}
+
+.progressmain{
+    background-color: rgb(252, 247, 248);
+}
+
+.App-logo{
+    height: 2.5rem;
+    margin-top: .5rem;
+}
+
+.footer{
+    color: white;
+    height: 4rem;
+    background-color: #282c34;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
