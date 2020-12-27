@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "boxicons";
 
 const Tasks = () => {
   const [task, setTask] = useState("");
